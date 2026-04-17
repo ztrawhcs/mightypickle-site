@@ -75,9 +75,33 @@
       display: block;
     }
 
+    /* ── Featured pattern video (full-width, above grid) ── */
+    .pattern-featured {
+      max-width: 900px;
+      margin: 0 auto 32px;
+      padding: 0 24px;
+    }
+    .pattern-featured video {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,0.5),
+        0 24px 80px rgba(0,0,0,0.6),
+        0 0 120px rgba(52,208,88,0.08);
+    }
+    .pattern-featured-label {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+    }
+
     /* ── Shared styles for screenshot and video hero ── */
-    .screenshot-hero video,
-    .patterns-grid video {
+    .screenshot-hero video {
       width: 100%;
       display: block;
     }
@@ -154,16 +178,24 @@
   <section class="patterns-section">
     <h2>Eight glow patterns</h2>
     <p class="sub">Gradient and Corners are free. Pro unlocks Comet, Wave, Marquee, Dot &amp; Dash, Segments, and Solid.</p>
+
+    <!-- Featured: Wave video full-width -->
+    <div class="pattern-featured">
+      <video autoplay muted loop playsinline>
+        <source src="img/video-waves.mp4" type="video/mp4">
+      </video>
+      <p class="pattern-featured-label">Wave</p>
+    </div>
+
+    <!-- 3-up grid -->
     <div class="patterns-grid">
       <div>
         <img src="img/screen-gradient.png" alt="Gradient pattern — red urgency glow around screen edges">
         <p class="pattern-label">Gradient</p>
       </div>
       <div>
-        <video autoplay muted loop playsinline>
-          <source src="img/video-waves.mp4" type="video/mp4">
-        </video>
-        <p class="pattern-label">Wave</p>
+        <img src="img/screen-wave-subtle.png" alt="Wave pattern — subtle glow along screen edge">
+        <p class="pattern-label">Wave — subtle</p>
       </div>
       <div>
         <img src="img/screen-comet.png" alt="Comet pattern — shooting comet orbiting screen edges">

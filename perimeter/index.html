@@ -6,6 +6,86 @@
   <title>Perimeter — Never be late to a meeting again</title>
   <meta name="description" content="Perimeter glows your screen edges as meetings approach — green to yellow to orange to red. A gentle, impossible-to-miss reminder, built for Mac.">
   <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* ── Screenshot hero ── */
+    .screenshot-hero {
+      padding: 0 24px 72px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .screenshot-hero img,
+    .screenshot-hero video {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,0.5),
+        0 24px 80px rgba(0,0,0,0.6),
+        0 0 120px rgba(247,108,47,0.12);
+    }
+
+    /* ── Patterns grid ── */
+    .patterns-section {
+      padding: 60px 0;
+      border-top: 1px solid var(--border);
+    }
+    .patterns-section h2 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .patterns-section .sub {
+      text-align: center;
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 40px;
+    }
+    .patterns-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .patterns-grid img,
+    .patterns-grid video {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+    .pattern-label {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      margin-top: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── App icon in hero ── */
+    .p-hero .app-icon-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      margin: 0 auto 24px;
+      display: block;
+    }
+
+    /* ── Shared styles for screenshot and video hero ── */
+    .screenshot-hero video,
+    .patterns-grid video {
+      width: 100%;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .patterns-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -23,9 +103,7 @@
 
   <!-- Hero -->
   <section class="p-hero">
-    <div class="glow-ring">
-      <div style="font-size:64px;line-height:1;">🟢</div>
-    </div>
+    <img src="img/icon.png" class="app-icon-img" alt="Perimeter app icon">
     <h1>Never be late to<br>a meeting again.</h1>
     <p class="tagline">Perimeter glows your screen edges as meetings approach — a gentle, impossible-to-miss reminder that lives in the background.</p>
     <div class="btn-row">
@@ -35,6 +113,13 @@
     </div>
     <p style="margin-top:14px;font-size:13px;color:var(--muted);">Free · macOS 13+ · 7-day Pro trial included</p>
   </section>
+
+  <!-- Hero video -->
+  <div class="screenshot-hero">
+    <video autoplay muted loop playsinline>
+      <source src="img/video-yellow.mp4" type="video/mp4">
+    </video>
+  </div>
 
   <!-- How it works -->
   <section class="how-section">
@@ -54,13 +139,35 @@
         <div class="stage stage-3">
           <div class="dot"></div>
           <h3>5 min out</h3>
-          <p>Orange. Start heading to the meeting.</p>
+          <p>Orange. An overlay shows the event name — snooze or dismiss.</p>
         </div>
         <div class="stage stage-4">
           <div class="dot"></div>
           <h3>Right now</h3>
-          <p>Red. You're on.</p>
+          <p>Red. "Time to go." You won't miss it.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patterns showcase -->
+  <section class="patterns-section">
+    <h2>Eight glow patterns</h2>
+    <p class="sub">Gradient and Corners are free. Pro unlocks Comet, Wave, Marquee, Dot &amp; Dash, Segments, and Solid.</p>
+    <div class="patterns-grid">
+      <div>
+        <img src="img/screen-gradient.png" alt="Gradient pattern — red urgency glow around screen edges">
+        <p class="pattern-label">Gradient</p>
+      </div>
+      <div>
+        <video autoplay muted loop playsinline>
+          <source src="img/video-waves.mp4" type="video/mp4">
+        </video>
+        <p class="pattern-label">Wave</p>
+      </div>
+      <div>
+        <img src="img/screen-comet.png" alt="Comet pattern — shooting comet orbiting screen edges">
+        <p class="pattern-label">Comet</p>
       </div>
     </div>
   </section>
@@ -74,19 +181,19 @@
         <div class="feature-card">
           <div class="fi">📅</div>
           <h3>Calendar-aware</h3>
-          <p>Reads your macOS Calendar and Reminders automatically. No setup, no accounts.</p>
+          <p>Reads your macOS Calendar and Reminders automatically. No setup, no accounts, no manual entry.</p>
         </div>
 
         <div class="feature-card">
           <div class="fi">🎨</div>
-          <h3>Beautiful patterns</h3>
-          <p>Gradient, Comet, ChompMan, Wave, Marquee and more. New patterns added every month.</p>
+          <h3>Eight glow patterns</h3>
+          <p>Gradient, Corners, Comet, Wave, Marquee, Dot &amp; Dash, Segments, Solid. New patterns added over time.</p>
         </div>
 
         <div class="feature-card">
           <div class="fi">🖥️</div>
           <h3>Multi-monitor</h3>
-          <p>Pro users can have Perimeter orbit every screen in their setup simultaneously.</p>
+          <p>Pro users can have Perimeter glow every screen in their setup simultaneously.</p>
         </div>
 
         <div class="feature-card">
@@ -104,7 +211,7 @@
         <div class="feature-card">
           <div class="fi">🎯</div>
           <h3>Per-event styles</h3>
-          <p>Pro users can assign a unique glow pattern to each calendar event.</p>
+          <p>Pro users can assign a unique glow pattern and color to individual calendar events.</p>
         </div>
 
       </div>
@@ -132,11 +239,11 @@
           <div class="tier">Pro</div>
           <div class="amount">$9.99 <span>one-time</span></div>
           <ul>
-            <li>All glow patterns</li>
+            <li>All 8 glow patterns</li>
             <li>Color presets &amp; custom colors</li>
             <li>Multi-monitor support</li>
             <li>Per-event glow styles</li>
-            <li>Monthly new patterns</li>
+            <li>New patterns over time</li>
           </ul>
         </div>
 

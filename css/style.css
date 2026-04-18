@@ -145,6 +145,9 @@ footer a:hover { color: var(--text); }
   width: 100%;
   border-radius: 14px;
 }
+.app-card .icon img.icon-perimeter {
+  width: 75%;
+}
 .app-card .badge {
   display: inline-block;
   margin-top: 16px;

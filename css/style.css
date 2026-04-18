@@ -142,8 +142,7 @@ footer a:hover { color: var(--text); }
   line-height: 1.5;
 }
 .app-card .icon img {
-  width: 64px;
-  height: 64px;
+  width: 100%;
   border-radius: 14px;
 }
 .app-card .badge {

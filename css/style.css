@@ -231,6 +231,7 @@ div.app-card:hover {
   transition: opacity 0.15s;
 }
 .btn-primary:hover { opacity: 0.88; }
+.btn-primary.btn-disabled { opacity: 0.5; cursor: default; pointer-events: none; }
 .btn-secondary {
   display: inline-flex;
   align-items: center;
